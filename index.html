@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Task Project </title>
+    <link rel="stylesheet" href="css/base.css">
+     <link rel="stylesheet" href="css/components.css">
+      <link rel="stylesheet" href="css/layout.css">
+       <link rel="stylesheet" href="css/respnsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <div class="app">
+  <div class="header">
+    <h1>قائمة المهام</h1>
+    <button class="add-btn" id="add-btn"> + </button>
+  </div>
+    <div id="empty-status"  class="empty-status"  >
+
+    <h3>لا يوجد مهام حتى الان</h3>
+    <p>ابدأ بإضافة أول مهمة !</p>
+   </div>
+
+  <div class="board">
+  <div id="todo-column" class="column">
+    <h3>جديدة</h3>
+  
+  </div>
+
+  <div id="doing-column" class="column">
+    <h3>قيد التنفيذ</h3>
+   
+  </div>
+
+  <div id="done-column" class="column">
+    <h3>مكتملة</h3>
+
+  </div>
+  
+  </div>
+ 
+  </div> 
+
+<div id="add-modal" class="modal-add hidden">
+  <button id="close-btn" class="close-btn">×</button>
+
+  <h2 id="modal-title">إضافة مهمة</h2>
+  <label>اسمها</label>
+
+  <input id="name"  class="form-input" type="text" required>
+  <small id="error-name" class="error"> </small>
+  <label>وصف لها</label>
+
+  <textarea id="description" class="form-textarea"></textarea>
+
+  <label>تاريخ انتهائها</label>
+  <input id="date" class="form-input" type="date">
+  <small id="error-date" class="error"></small>
+
+  <label>حالتها</label>
+  
+  <select id="status" class="form-input">
+    <option value="جديدة">جديدة  </option>
+    <option value="قيد التنفيذ">قيد التنفيذ</option>
+    <option value="مكتملة">مكتملة</option>
+  </select>
+
+  <button id="submit-btn" class="submit-btn">إضافة المهمة</button>
+</div>
+<div id="toast" class="toast hidden"></div>
+
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script data-goatcounter="https://layan.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+   
+</body>
+</html>
